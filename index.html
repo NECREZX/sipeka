@@ -7,6 +7,12 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
     />
     <title>FinTrack - Pencatatan Keuangan Pribadi</title>
+    
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#6a1b9a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -3244,6 +3250,14 @@
         // Inisialisasi filter button
         updateActiveFilterButton(elements.filterAll);
       });
+    </script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/service-worker.js")
+          .then(() => console.log("Service Worker registered"))
+          .catch((err) => console.log("SW failed", err));
+      }
     </script>
   </body>
 </html>
