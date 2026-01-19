@@ -1,4 +1,4 @@
-const CACHE_NAME = "sipeka-v1";
+const CACHE_NAME = "sipeka-v2";
 const urlsToCache = ["/"];
 
 self.addEventListener("install", function (event) {
